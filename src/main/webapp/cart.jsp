@@ -2,8 +2,6 @@
 <%@ page import="model.Cart" %>
 <%@ page import="model.CartItem" %>
 <%
-    // Chapter 7: HttpSession Demonstration
-    // Retrieve the shopping cart from the user's session
     Cart cart = (Cart) session.getAttribute("cart");
 %>
 <!DOCTYPE html>

@@ -4,10 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Cart represents the shopping cart stored inside the user's HttpSession.
- * Manages the collection of CartItem objects across multiple HTTP requests.
- */
 public class Cart implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -25,11 +21,6 @@ public class Cart implements Serializable {
         this.items = items;
     }
 
-    /**
-     * Adds a product to the shopping cart.
-     * If the product already exists in the cart, increment its quantity by 1.
-     * Otherwise, create a new CartItem with quantity 1.
-     */
     public void addItem(Product product) {
         if (product == null || product.getId() == null) {
             return;
@@ -42,15 +33,10 @@ public class Cart implements Serializable {
             }
         }
 
-        // Product not in cart yet, add as new item
         CartItem newItem = new CartItem(product, 1);
         items.add(newItem);
     }
 
-    /**
-     * Updates the quantity for a specific product ID.
-     * If the new quantity is <= 0, the item is removed from the cart.
-     */
     public void updateQuantity(String productId, int quantity) {
         if (productId == null) {
             return;
@@ -69,9 +55,6 @@ public class Cart implements Serializable {
         }
     }
 
-    /**
-     * Removes an item from the cart matching the specified product ID.
-     */
     public void removeItem(String productId) {
         if (productId == null) {
             return;
@@ -80,9 +63,6 @@ public class Cart implements Serializable {
         items.removeIf(item -> item.getProduct() != null && productId.equalsIgnoreCase(item.getProduct().getId()));
     }
 
-    /**
-     * Calculates the total amount of all items in the cart.
-     */
     public double getTotal() {
         double total = 0.0;
         for (CartItem item : items) {
@@ -95,9 +75,6 @@ public class Cart implements Serializable {
         return String.format(java.util.Locale.US, "$%.2f", getTotal());
     }
 
-    /**
-     * Calculates the total quantity of all items in the cart.
-     */
     public int getTotalQuantity() {
         int totalQty = 0;
         for (CartItem item : items) {

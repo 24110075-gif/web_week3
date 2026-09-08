@@ -2,10 +2,6 @@ package model;
 
 import java.io.Serializable;
 
-/**
- * CartItem represents an item within the user's shopping cart.
- * Links a Product with a Quantity and calculates line item total.
- */
 public class CartItem implements Serializable {
     private static final long serialVersionUID = 1L;
 

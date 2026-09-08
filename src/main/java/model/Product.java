@@ -2,10 +2,6 @@ package model;
 
 import java.io.Serializable;
 
-/**
- * Product model class representing a CD product in the store.
- * Implements Serializable so that objects can safely be placed in HttpSession.
- */
 public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
 

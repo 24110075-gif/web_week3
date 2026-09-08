@@ -1,11 +1,5 @@
-/* ==========================================================================
-   CD Store - Modern, Fresh & Bright Theme
-   Style-only redesign preserving 100% original logic and HTML structure
-   ========================================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-/* --- Reset & Page Background --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -36,7 +30,6 @@ body {
     border: 1px solid #e2e8f0;
 }
 
-/* --- Page Headings --- */
 h2 {
     font-size: 24px;
     font-weight: 800;
@@ -88,7 +81,6 @@ p {
     font-size: 14px;
 }
 
-/* --- Welcome / Cookie Banner --- */
 .welcome-message {
     font-size: 13.5px;
     font-weight: 500;
@@ -109,7 +101,6 @@ p {
     font-size: 16px;
 }
 
-/* --- Table Styling --- */
 table {
     border-collapse: separate;
     border-spacing: 0;
@@ -160,12 +151,10 @@ tbody tr:hover td {
     background-color: #f8faff;
 }
 
-/* Column specific styles */
 td:nth-child(2) {
     font-weight: 500;
 }
 
-/* Total row */
 .total-row td {
     font-size: 16px;
     font-weight: 700;
@@ -179,7 +168,6 @@ td:nth-child(2) {
     font-size: 17px;
 }
 
-/* --- Form Elements --- */
 form {
     display: inline-flex;
     align-items: center;
@@ -188,7 +176,6 @@ form {
     padding: 0;
 }
 
-/* Quantity input box */
 input[type="text"] {
     width: 48px;
     padding: 6px 8px;
@@ -210,7 +197,6 @@ input[type="text"]:focus {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-/* Base button styles */
 input[type="submit"],
 button {
     font-family: inherit;
@@ -228,7 +214,6 @@ button {
     white-space: nowrap;
 }
 
-/* Add to Cart button */
 input[value="Add To Cart"] {
     background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     color: #ffffff;
@@ -245,7 +230,6 @@ input[value="Add To Cart"]:active {
     transform: translateY(0);
 }
 
-/* Update Cart button */
 input[value="Update"] {
     background-color: #f1f5f9;
     color: #334155;
@@ -260,7 +244,6 @@ input[value="Update"]:hover {
     border-color: #94a3b8;
 }
 
-/* Remove Item button */
 input[value="Remove Item"] {
     background-color: #fff1f2;
     color: #e11d48;
@@ -275,7 +258,6 @@ input[value="Remove Item"]:hover {
     border-color: #fda4af;
 }
 
-/* Note helper text */
 p.note {
     background: #f8fafc;
     border-left: 4px solid #3b82f6;
@@ -291,7 +273,6 @@ p.note strong {
     color: #1e293b;
 }
 
-/* --- Action Buttons (Bottom Bar) --- */
 .action-buttons {
     margin-top: 24px;
     padding-top: 20px;
@@ -306,7 +287,6 @@ p.note strong {
     margin: 0;
 }
 
-/* Continue Shopping */
 input[value="Continue Shopping"] {
     background-color: #ffffff;
     color: #334155;
@@ -323,7 +303,6 @@ input[value="Continue Shopping"]:hover {
     transform: translateY(-1px);
 }
 
-/* Checkout Button */
 input[value="Checkout"] {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: #ffffff;
@@ -343,7 +322,6 @@ input[value="Checkout"]:active {
     transform: translateY(0);
 }
 
-/* --- Responsive Adjustments --- */
 @media (max-width: 640px) {
     body {
         margin: 10px;

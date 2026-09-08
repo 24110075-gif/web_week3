@@ -53,7 +53,6 @@
         </tbody>
     </table>
     <% 
-        // Order completed, remove cart from session
         session.removeAttribute("cart");
     } else { %>
     <p><strong>Total Amount: <%= orderTotal %></strong></p>

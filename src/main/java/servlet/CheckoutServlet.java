@@ -11,9 +11,6 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-/**
- * CheckoutServlet displays order confirmation and completes the order.
- */
 @WebServlet("/checkout")
 public class CheckoutServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -38,7 +35,6 @@ public class CheckoutServlet extends HttpServlet {
 
         request.setAttribute("orderTotal", String.format(java.util.Locale.US, "$%.2f", orderTotal));
         
-        // Forward to checkout.jsp for rendering
         request.getRequestDispatcher("/checkout.jsp").forward(request, response);
     }
 }

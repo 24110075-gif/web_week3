@@ -4,8 +4,6 @@
 <%@ page import="model.Product" %>
 <%@ page import="java.util.List" %>
 <%
-    // Chapter 7: Cookie Demonstration
-    // Check if the "lastVisit" cookie exists and update it with the current timestamp
     String welcomeMsg = CookieUtil.getWelcomeMessageAndUpdate(request, response);
     List<Product> products = ProductData.getProducts();
 %>
@@ -20,7 +18,6 @@
 
 <body>
 
-    <!-- Cookie demonstration welcome banner -->
     <div class="welcome-message">
         <%= welcomeMsg %>
     </div>
